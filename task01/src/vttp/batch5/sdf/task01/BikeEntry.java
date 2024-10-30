@@ -1,4 +1,4 @@
-package vttp.batch5.sdf.task01.models;
+package vttp.batch5.sdf.task01;
 //
 // IMPORTANT: DO NOT MODIFY THIS CLASS
 
