@@ -48,12 +48,8 @@ public class Main {
 			}}
 		}
 
-		List<BikeEntry> top5Entries = new ArrayList<>();
-		for (int i = 0; i < 5 && i < sortedEntries.size(); i++){
-			top5Entries.add(sortedEntries.get(i));
-		}
-		/* entries.sort(Comparator.comparingInt(e -> -(e.getCasual() + e.getRegistered())));
-		List<BikeEntry> top5Entries = entries.subList(0, Math.min(5, entries.size()));  */
+		List<BikeEntry> top5Entries = entries.subList(0, 5);
+		
 
 		String[]positions = {"highest", "second highest", "third highest", "forth highest", "fifth highest"};
 		
@@ -68,13 +64,7 @@ public class Main {
 			String weather = Helper.toWeather(entry.getWeather());
 			String holiday = entry.isHoliday() ? "a holiday" : "not a holiday";
 			
-			System.out.printf("The %s recorded number of cyclist was in %s\n, on a %s in the month of %s\n. There were a total of %d cyclists. The weather was \n%s. %s was %s.", position, season, day, month, totalCyclists, weather, day, holiday);
-		}
-		
-		
-		
-
-		
-
+			System.out.printf("The %s (position) recorded number of cyclist was in %s\n (season), on a %s (day) in the month of %s (month).\nThere were a total of %d (total) cyclists. The weather was \n%s (weather). %s (day) was %s.", position, season, day, month, totalCyclists, weather, day, holiday);
+		}	
 	}
 }
